@@ -55,14 +55,14 @@ public class Rabbit {
 		
 		Rabbit[] r = new Rabbit[10];
 		
-		init(r);
+		init(r);		//초기화부
 		
-		ascending(r);
+		ascending(r);		// 오름차순
 		System.out.println("오름차순");
 		print(r);
-		descending(r);
+		descending(r);		// 내림차순
 		System.out.println("\n내림차순");
-		print(r);
+		print(r);		// 출력
 		
 	}
 }
