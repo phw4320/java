@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class ListTest2 {
 
 	public static void main(String[] args) {
+		
 		ArrayList<Integer> al = new ArrayList<Integer>();
 		// ad.add(3.1);//실수형 안됨
 		for (int i = 0; i < 6; i++) {
