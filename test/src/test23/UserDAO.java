@@ -8,7 +8,7 @@ public class UserDAO {
 	public UserDAO(String name, int age, int num) {
 		this.name = name;
 		this.age = age;
-		this.num = num;
+		this.num = num; 
 	}
 	public String getName() {
 		return name;
