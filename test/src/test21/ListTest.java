@@ -1,11 +1,13 @@
 package test21;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class ListTest {
 
 	public static void main(String[] args) {
-		ArrayList<String> strList = new ArrayList<>();
+		//a ab = new a();
+		ArrayList<a> strList = new ArrayList<a>();
 		
 		/*strList.add(1);
 		strList.add(true);
@@ -16,18 +18,20 @@ public class ListTest {
 		strList.add(1.1+"");
 		*/
 		System.out.println(strList.size());
-		strList.add("현우");
+		Scanner scan = new Scanner(System.in);
+		
+		strList.add(new a(scan.nextLine(),scan.nextInt()));
 		System.out.println(strList.size());
-		strList.add("멋쟁이");
-		strList.add("짱");
+		strList.add(new a("현우",20));
+		strList.add(new a("현우",20));
 		System.out.println(strList.size());
 		int idx = strList.indexOf("짱");
 		System.out.println(idx);
 		/*for(Object o :strList) {
 			System.out.println(o);	// <String>지우고 선언할 경우 오브젝트데이터 타입가능(옳지않은방법 - 아무거나 다 넣을수 있다.)
 		*/
-		for(String str : strList) {
-			System.out.println(str);
+		for(a str : strList) {
+			System.out.println(str.getName()+", "+str.getAge());
 	}
 		
 	}
