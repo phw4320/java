@@ -13,7 +13,7 @@ public class DBtest {
 		String url = "jdbc:mariadb://127.0.0.1:3306/oreo";
 		String id = "root";
 		String pwd = "12345678";
-		
+		 
 		try {
 			Class.forName("org.mariadb.jdbc.Driver");
 			con = DriverManager.getConnection(url, id, pwd);
