@@ -8,6 +8,7 @@ import java.sql.Statement;
 
 public class DBCon {
 	// 접속 마리아db url = MariaDB/127.0.01:3306/oreo
+	
 	public static void main(String[] args) {
 		Connection con;
 		String url = "jdbc:mariadb://127.0.0.1:3306/oreo";
@@ -24,6 +25,7 @@ public class DBCon {
 			// String sql = "Select * from user_info"; // 뷰
 			// String sql= "insert into user_info values(6,'철이',10,'경기도','테스트)"; //삽입
 			// stat.executeUpdate(sql);
+			
 			String sql = "delete from user_info where uName = '철수'"; // 삭제
 			int cnt = stat.executeUpdate(sql); // 데이터가 있으면 1 없으면 0
 			if (cnt == 1) {
