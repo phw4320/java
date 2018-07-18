@@ -11,7 +11,7 @@ public class Controller {
 		
 		//ArrayList<Service> al = new ArrayList<Service>();
 		//boolean isOk = true;
-		
+		 
 		if("1".equals(order)) {
 			System.out.println("show User List");
 			a.print();
@@ -33,7 +33,6 @@ public class Controller {
 			
 		}else if("q".equals(order)) {
 			System.out.println("exit");
-			
 			//System.exit(0);
 			Exec.isOk = false;
 		}else {

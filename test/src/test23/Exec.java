@@ -15,7 +15,7 @@ public class Exec { // 뷰
 			String order = "";
 			Controller c = new Controller();
 			while (!"q".equals(order)) {
-				
+				 
 				order = scan.nextLine();
 				c.callOrder(order);
 				System.out.println("--------------------유저 프로그램-----------------------");
@@ -25,6 +25,5 @@ public class Exec { // 뷰
 			}
 		}
 		System.out.println("-------------------유저 프로그램 종료---------------------");
-
-	}
+		}
 }

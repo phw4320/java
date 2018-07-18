@@ -4,20 +4,22 @@ public class UserDAO {
 	private String name;
 	private int age;
 	private int num;
-	public UserDAO() {}
 	
+	public UserDAO() {
+		
+	}
 	public UserDAO(String name, int age, int num) {
 		this.name = name;
 		this.age = age;
 		this.num = num; 
 	}
+	
 	public String getName() {
 		return name;
 	}
 	public void setName(String name) {
 		this.name = name;  
-	}
-	 
+	} 
 	public int getAge() {
 		return age;
 	}
