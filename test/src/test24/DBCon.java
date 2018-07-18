@@ -13,7 +13,7 @@ public class DBCon {
 		Connection con;
 		String url = "jdbc:mariadb://127.0.0.1:3306/oreo";
 		String id = "root";
-		String pwd = "12345678";
+		String pwd = "1q2w3e4r!";
 
 		try {
 			Class.forName("org.mariadb.jdbc.Driver"); // 패키지내의 클래스 //예외처리를 하지않으면 쓸수없음
@@ -35,7 +35,9 @@ public class DBCon {
 			}
 			
 			sql = "Select * from user_info";
-			ResultSet rs = stat.executeQuery(sql); // 메모리 중복 없음 //실행
+			
+			ResultSet rs = stat.executeQuery(sql); // 메모리 중복 없음 //실행 //수행결과로 ResultSet 객체의 값을 반환
+			 
 			while (rs.next()) { // rs.next는 다음 인덱스의 데이터 있으면 true 없으면 false 반환 //호출할떄마다 처음값 감 넥스트하기전은 첫번째값
 				int uNum = rs.getInt("uNum");
 				String uName = rs.getString("uName");
@@ -45,9 +47,9 @@ public class DBCon {
 				System.out.println(uNum + ", " + uName + ", " + uAge + ", " + uAddress + ", " + uEtc);
 			}
 			
-			sql = "insert into user_info (uName, uAge, uAddress, uEtc) values('철이',64,'충청도','테스트');";
-			stat.executeUpdate(sql);				// 삽입
-			cnt = stat.executeUpdate(sql);
+			sql = "insert into user_info (uName, uAge, uAddress, uEtc) values('철이',64,'충청도','테스트'),('철이',64,'충청도','테스트');";
+			//stat.executeUpdate(sql);				// 삽입
+			cnt = stat.executeUpdate(sql);	// INSERT / DELETE / UPDATE 관련 구문에서는 반영된 레코드의 건수를 반환
 			if (cnt == 1) {
 				System.out.println("추가 완료");
 			} else {
@@ -56,7 +58,7 @@ public class DBCon {
 			
 			
 			sql = "update user_info set uAddress='달나라'" + "where uNum=21";
-			stat.executeUpdate(sql);				// 수정
+			//stat.executeUpdate(sql);				// 수정
 			cnt = stat.executeUpdate(sql);
 			if (cnt == 1) {
 				System.out.println("변경 완료");
