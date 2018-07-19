@@ -20,8 +20,8 @@ public class UserDAOImpl implements UserDAO {
 	@Override
 	public int insertUserInfo(HashMap<String, String> userInfo) {
 		String sql = "insert into user_info";
-		sql += "(uiName, uiAge, uiCredat, urCretim, uiEtcm uiDelete)";
-		sql += "values(?,?,date_format(now(), '%y%m%d'),date_format(now(), '%h%i%s'),?,'0')";		//데이터바인딩
+		sql += "(uiName, uiAge, uiCredat, urCretim, uiEtc, uiDelete)";
+		sql += "values(?,?,date_format(now(),'%y%m%d'),date_format(now(),'%h%i%s'),?,'0')";		//데이터바인딩
 		//  sql을 파싱해서 사용하는 prepareStatement 사용
 		try {
 			PreparedStatement ps = this.con.prepareStatement(sql);	//만들때 sql을 넣어서만듬 // 만들고 sql읽는 statement와는 다름
