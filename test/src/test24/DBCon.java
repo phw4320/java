@@ -32,7 +32,7 @@ public class DBCon {
 				System.out.println("1번 삭제됨");
 			} else {
 				System.out.println("1번이 없어 삭제불가");
-			}
+			} 
 			
 			sql = "Select * from user_info";
 			
