@@ -31,7 +31,8 @@ public class DBCon {
 
 			String sql = "delete from user_info where uName = '철수'"; // 삭제
 			int cnt = stat.executeUpdate(sql); // 데이터가 있으면 1 없으면 0
-			if (cnt == 1) {
+			if (cnt == 1) { // sql이 정상적으로 실행된 결과로 간주하는 정수값을 리턴
+
 				System.out.println("1번 삭제됨");
 			} else {
 				System.out.println("1번이 없어 삭제불가");
@@ -58,7 +59,8 @@ public class DBCon {
 			sql = "Select * from user_info";
 
 			rs = stat.executeQuery(sql); // 메모리 중복 없음 //실행 //수행결과로 ResultSet 객체의 값을 반환
-
+			//executeQuery 메소드는 하나의 ResultSet객체를 리턴
+			
 			while (rs.next()) { // rs.next는 다음 인덱스의 데이터 있으면 true 없으면 false 반환 //호출할떄마다 처음값 감 넥스트하기전은 첫번째값
 				int uNum = rs.getInt("uNum");
 				String uName = rs.getString("uName");
