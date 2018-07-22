@@ -23,7 +23,7 @@ public class UserDAOImpl implements test25.UserDAO {
 
 	@Override
 	public int insertUserInfo(HashMap<String, String> userInfo) {
-		this.con = DBCon.getCon(); // 유저를 넣을때마다 등록
+		this.con = DBCon.getCon(); // 유저를 넣을때마다 등록	//연결해서등록할때마다 연결하고 등록이끝나면 종료해야한다. 
 		String sql = "insert into user_info";
 		sql += "(uiName, uiAge, uiCredat, uiCretim, uiEtc, uiDelete)";
 		sql += "values(?,?,date_format(now(),'%y%m%d'),date_format(now(),'%h%i%s'),?,'0')"; // 데이터바인딩
@@ -96,7 +96,7 @@ public class UserDAOImpl implements test25.UserDAO {
 		String sql = "update user_info";
 		if(userInfo!=null) {
 			if(userInfo.get("uiName")!=null || userInfo.get("uiEtc")!=null) {
-				sql+=" set uiEtc=? where uiName=?";
+				sql+=" set uiEtc=?,uiAge=? where uiName=?";
 			}
 		}
 		try {
@@ -105,7 +105,8 @@ public class UserDAOImpl implements test25.UserDAO {
 			if(userInfo!=null) {
 				if(userInfo.get("uiName")!=null || userInfo.get("uiEtc")!=null) {
 					ps.setString(1, userInfo.get("uiEtc"));
-					ps.setString(2, userInfo.get("uiName"));
+					ps.setString(2, userInfo.get("uiAge"));
+					ps.setString(3, userInfo.get("uiName"));
 				}
 			}
 			result = ps.executeUpdate();
@@ -138,13 +139,13 @@ public class UserDAOImpl implements test25.UserDAO {
 				sql+=" where uiName=?";
 			}
 		}
-		
+		 
 		try {
 			PreparedStatement ps = this.con.prepareStatement(sql);
 			if(userInfo!=null) {
 				if(userInfo.get("uiName")!=null) {
 					ps.setString(1, userInfo.get("uiName"));
-				}
+				} 
 			}
 			ResultSet rs = ps.executeQuery();
 			while(rs.next()) {

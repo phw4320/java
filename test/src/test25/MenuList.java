@@ -18,7 +18,7 @@ public class MenuList {
 	public static void printMenu() {
 		for(int i=0; i<menuList.size(); i++) {
 		System.out.println(menuList.get(i));
-		}
+		} 
 	}
 	
 	public static void inputData() {

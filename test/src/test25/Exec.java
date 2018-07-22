@@ -13,28 +13,30 @@ public class Exec {
 		UserDAOImpl udao = new UserDAOImpl();
 		HashMap<String, String> userInfo = new HashMap<String, String>();
 		//userInfo.put("uiName","y");
-	//	userInfo.put("uiName","q");
+		//userInfo.put("uiName","q");
 		
 		ArrayList<HashMap<String, String>> userList = udao.selectUserInfo(null);
 		//ArrayList<HashMap<String, String>> userList = udao.selectUserInfo(userInfo);
-		for(int i = 0; i<userList.size(); i++) {
+		for(int i = 0; i<userList.size(); i++) { 
 			System.out.println(userList.get(i));
 		}
 
-		/*userInfo.put("uiName","q");
+		userInfo.put("uiName","q");
 		if(udao.deleteUserInfo(userInfo)==1)
 		{
 			System.out.println("삭제완료");
 		} else  {
 			System.out.println("삭제오류");
 		}
-		userInfo.put("uiEtc","dddddd");
-		userInfo.put("uiName","y");
+		userInfo.put("uiEtc","zz");
+		userInfo.put("uiAge","2");
+		userInfo.put("uiName","tt");
+		
 		if(udao.updateUserInfo(userInfo)==1)
 		{
 			System.out.println("변경완료");
 		} else  {
-			System.out.println("변경오류");
+			System.out.println("변경오류"); 
 		}
 		
 		for (HashMap<String, String> a : userList) {
@@ -71,9 +73,8 @@ public class Exec {
 			} else {
 				System.out.println("등록 실패");
 			}
-		}*/
+		}
 	}
-
 }
 
 // tcl = 트랜잭션 컨트롤
