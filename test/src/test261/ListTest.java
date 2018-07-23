@@ -34,7 +34,7 @@ public class ListTest {
 			if (tmpArr[i].indexOf(str) !=-1) {
 				idx = i;
 			}
-		}
+		}System.out.println();
 		for (int i = 0; i < idx; i++) {
 			this.strArr[i] = tmpArr[i];
 		}
