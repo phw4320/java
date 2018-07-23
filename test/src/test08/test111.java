@@ -10,3 +10,4 @@ public class test111 extends Obj {
 	int b = o.getNum();
 	}
 }
+ 

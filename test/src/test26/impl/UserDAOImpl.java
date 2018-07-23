@@ -7,11 +7,10 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import org.mariadb.jdbc.internal.SQLExceptionMapper;
 
 import test26.DBCon;
 import test26.UserDAO;
-
+ 
 public class UserDAOImpl implements test26.UserDAO {
 	private Connection con;
 	int result = 0;

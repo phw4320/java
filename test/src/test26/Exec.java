@@ -16,7 +16,7 @@ public class Exec {
 		for (int i = 0; i < userList.size(); i++) {
 			System.out.println(userList.get(i));
 		}
-
+ 
 		System.out.println("등록할 명수를 입력");
 		int cnt = Integer.parseInt(scan.nextLine());
 		for (int i = 0; i < cnt; i++) {
