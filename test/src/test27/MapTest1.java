@@ -11,7 +11,7 @@ public class MapTest1 {
 		for(int i=0; i<3; i++) {
 			HashMap<String, String> hm3 = new HashMap<String, String>();		
 			hm3.put("name", "first"+i);
-			hm3.put("age", "123"+i);
+			hm3.put("age", "123");
 			hm5.add(hm3);
 		}
 		return hm5;
