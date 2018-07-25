@@ -19,7 +19,7 @@ public class Exec {
   
 		System.out.println("등록할 명수를 입력");
 		int cnt = Integer.parseInt(scan.nextLine());
-		for (int i = 0; i < cnt; i++) {
+		for (int i = 0; i < cnt; i++) { 
 			System.out.println("이름입력");
 			String name = scan.nextLine();
  

@@ -33,7 +33,7 @@ public class ListTest02 {
 		System.out.println("");
 		Collections.sort(strList);
 		Collections.reverse(strList);
-		for(int i=0; i<strList.size(); i++) {
+		for(int i=0; i<strList.size(); i++) { 
 			System.out.print(strList.get(i) + ", ");
 		}
 
