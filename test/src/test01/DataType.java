@@ -12,7 +12,7 @@ package test01;
 // 만약에 두개의 단어가 합쳐졌다면 두 번째 단어의 첫글자가 대문자
 // ex -> numberTest <-- number의 n 소문자, test의 t 대문자
 // ex -> myNumberTest <-- 세번째 단어의 첫글자도 대문자
-
+ 
 public class DataType {
 public static void main(String[] args) {
 	for(int i=1; i<=10; i++) { 
