@@ -25,7 +25,7 @@ public class ListTest01 {
 		ll.add(18);
 		printList(ll);*/
 		
-		List<Number> al = new ArrayList<Number>();
+		List<Number> al = new ArrayList<Number>(); //추상클래스 Number - 모든 자료형 클래스의 슈퍼클래스
 		al.add(10);
 		al.add(10.1);
 		
