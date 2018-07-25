@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<form>
+	<input type="text" id = "num1"><br>
+	<button type="button" onclick = "alert(1)">클릭 </button> 
+
+<script>
+	/* var num = 1;			// 1을 넣는순간 데이터타입이 정수형으로바뀜 = 동적데이터바인딩
+	num = "1";				// on이 붙으면 이벤트
+	var num2 = 1;
+	alert(num+num2);*/
+	
+	var a = 1;				// var 은 미리선언해주어야 그밑으로  사용할 수 있다.
+	alaer(a);
+	
+	test();					// 함수는 자바가 미리 다 파악을 하고선 컴파일하기때문에 순서에 구속받지않는다.
+	function test() {
+		alert(2);
+	}
+	
+	var a = function() {
+		alert(3);'
+	}	
+	
+	</script>	
+</form> 
+
+</body>
+</html>

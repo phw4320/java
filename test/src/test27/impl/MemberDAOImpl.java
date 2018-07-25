@@ -12,7 +12,7 @@ import test27.MemberDAO;
 
 public class MemberDAOImpl implements MemberDAO {
 	Connection con;
-
+	
 	@Override
 	public ArrayList<HashMap<String, String>> selectMember(HashMap<String, String> member) {
 		this.con = DBCon.getCon();
