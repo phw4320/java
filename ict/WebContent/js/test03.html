@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	숫자 1 :
+	<input type="text" id="num1">
+	<br> 연산자 :
+	<select id="op">
+		<option value="+">더하기</option>
+		<option value="-">빼기</option>
+		<option value="*">곱하기</option>
+		<option value="/">나누기</option>
+	</select>
+	<br> 숫자 2 :
+	<input type="text" id="num2">
+	<br>
+	<button type="button" onclick="calc();">계산하기</button>
+	<br> 결과 :
+	<input type="text" id="result">
+	<script>
+		function calc() {
+			var nObj1 = document.querySelector("#num1");
+			var opObj = document.querySelector("#op");
+			var nObj2 = document.querySelector("#num2");
+			var reObj = document.querySelector("#result");
+
+			if (opObj.value === "+") {
+				reObj.value  = parseInt(nObj1.value) + parseInt(nObj2.value)
+			}
+			else if (opObj.value === "-") {
+				reObj.value  = parseInt(nObj1.value) - parseInt(nObj1.value)
+			}
+			else if (opObj.value === "*") {
+				reObj.value  = parseInt(nObj1.value) * parseInt(nObj1.value)
+			}
+			else if (opObj.value === "*") {
+				reObj.value  = parseInt(nObj1.value) + parseInt(nObj1.value)
+			}	
+		}
+	</script>
+</body>
+</html>
