@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div id="rDiv"></div>
+	<button type="button" onclick="makeHtml()">테이블생성</button>
+	<script>
+		function makeHtml() {
+			var rDiv = document.querySelector("#rDiv");
+			var str = '<table border = "1">';
+
+			for (var i = 1; i <= 3; i++) {
+				str += '<tr>';
+				for (var j = 3 * i - 2; j <= 3 * i; j++) {
+					str += '<td>' + j + '</td>';
+				}
+				str += '<tr>';
+			}
+			str += '</table>';
+			rDiv.innerHTML = str;
+		}
+	</script>
+</body>
+</html>
