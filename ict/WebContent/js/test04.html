@@ -19,8 +19,8 @@
 	<script>
 		function checkValue(){ 
 			//var a = document.querySelectorAll('input[name=hb]: checked');
-			var a = document.querySelectorAll('input name=hb');
-			alert(a.length);
+			var a = document.querySelectorAll('input[name=trans]:checked');
+			alert(a[0].value);
 			/* var str = '';
 			for(var i=0; i<a.length; i++) {
 				str += a[i].value;
