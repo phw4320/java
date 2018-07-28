@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<div id = "rDiv"></div>
+
+열 갯수 : <input type="text" id="rCnt"> <br>
+행 갯수 : <input type="text" id="cCnt"> <br>
+<button onclick = "makeTbl()">테이블생성</button>
+
+<script>
+
+	function makeTbl() {
+		var rDiv = document.querySelector('#rDiv');
+		var row = document.querySelector('#rCnt');
+		var col = document.querySelector('#cCnt');
+		var r = parseInt(row.value);
+		var c = parseInt(col.value);
+
+		var str = '<table border ="1">';		
+		for(var i=1; i<=r; i++) {
+			str += '<tr>';
+			for(var j=1; j<=c; j++) {
+				str += '<td>'+ (((i-1)*c)+j) +'</td>';
+			}
+			str += '</tr>';
+		}
+		str += '</table>';
+		rDiv.innerHTML = str;
+	}
+	
+</script>
+</body>
+</html>
