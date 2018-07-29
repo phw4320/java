@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<button></button>
+
+	<script>
+		/* var arr = [1, 2, 3];
+		delete arr[0]		//해당인덱스 내용지우고 undefined로 만듬
+		arr.splice(1,2);	//해당 범위 내용+인덱스 모두 통째로 지움 
+		console.log(arr);		 */
+
+		/* var arr = [];
+		var obj = {};
+		var a = "d";
+		var b = 2;
+		var c;
+		
+		console.log(arr.constructor.name); // "Array"
+		console.log(obj.constructor.name); // "Object"
+		console.log(a.constructor.name);   // "String"
+		console.log(b.constructor.name);   // "Number"
+		console.log(c.constructor.name);   // "undefined" */
+
+		/* var num = 10;
+		var str = "a";
+		var boolean = true;
+		var obj = {};
+		var undefined;
+		var nullValue = null;
+		var arr = [];
+		function func() {};
+
+		console.log(typeof num); // number
+		console.log(typeof str); // string
+		console.log(typeof boolean); // boolean
+		console.log(typeof obj); // object
+		console.log(typeof undefined); // undefined
+		console.log(typeof nullValue); // object (null 은 object)
+		console.log(typeof arr); // object (배열도 object)
+		console.log(typeof func); // function */
+
+		/* function Func(arg) {
+			  // instanceof 로 생성자 함수임을 확인
+			  if (!(this instanceof arguments.callee)) // 'this instanceof 함수명' 도 가능
+			    return new Func(arg);	//arguments.callee는 호출된함수를 가르킴
+			  this.value = arg || 0;	//새롭게 객체 생성하는 방법
+			}
+
+			var a = new Func(100);
+			var b = Func(200);
+			console.log(a.value);
+			console.log(b.value); */
+
+	/* 	function func() {
+			return true;
+		}
+		console.log(func.prototype);
+		console.log(func.prototype.constructor);
+		 */
+		 
+		 /* function Person(name) {
+			 this.name = name; 
+			 } 
+		 
+		 var mySon = new Person('jaehee'); 	
+		 
+		 // constructor 속성을 통해 객체를 생성 
+		 var myGrandSon = new mySon.constructor('손자'); 
+		 console.log(myGrandSon.name); */
+		/*  function get_members(){
+			    return ['egoing', 'k8805', 'sorialgi'];
+			}
+			members = get_members();
+			// members.length는 배열에 담긴 값의 숫자를 알려준다. 
+			for(i = 0; i < members.length; i++){
+			    // members[i].toUpperCase()는 members[i]에 담긴 문자를 대문자로 변환해준다.
+			    document.write(members[i].toUpperCase());   
+			    document.write('<br />');
+			} */
+			
+			/* var li = ['a', 'b', 'c', 'd', 'e'];
+			li.push('f');		// 하나의 인자 추가
+			li.unshift('z');	// 시작점에 추가
+			li = li.concat(['f', 'g']);	// 복수의 인자 추가
+			alert(li);
+		 */
+		 /* var li = ['a', 'b', 'c', 'd', 'e'];
+		 li.shift();	// 배열 첫번째 원소 제거
+		 li.pop();		// 배열 마지막 원소 제거
+		 delete li[0]; // 해당 인덱스 값 삭제
+		 li.splice(0, 2, 'B');	//0~2번째 내용+인덱스 삭제 및 세번째인자 값 추가
+		 alert(li); */
+		 
+		 
+		/*  var grades = {'egoing': 10, 'k8805': 6, 'sorialgi': 80};
+		 for(key in grades) {
+		     document.write("key : "+key+" value : "+grades[key]+"<br />");
+		 } */
+		 
+		 
+		 var grades = {
+				    'list': {'egoing': 10, 'k8805': 6, 'sorialgi': 80},
+				    'show' : function(){
+				        for(var name in this.list){
+				            document.write(name+':'+this.list[name]+"<br />");
+				        }
+				    }
+				};
+				grades.show();
+		 
+	</script>
+</body>
+
+</html>
