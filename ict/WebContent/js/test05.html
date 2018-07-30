@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body id="body">
+
+	<div id="rDiv"></div>
+
+	<script>
+		var rDiv = document.querySelector('#rDiv');
+
+		//rDiv.innerHTML = '나는 대입된 디비전';
+		/* for(var i=1; i<10; i++) {
+			for(var j=1; j<10; j++) {
+			rDiv.innerHTML += i+ ' X '+ j +' = '+i*j+' ';		//rdiv안에있는 내용 대입
+			//console.log(rDiv);
+			} */
+		var str = '<table border="1">'; // 문자출력시 그냥 쌍따옴표써도 문제없이돌아감 홑따옴표쓰려면 \' 써야함
+		
+		/* for (var i = 1; i <= 9; i++) {
+			if(i%3==1) {
+				str += "<tr>";
+			}
+			str += '<td>'+i+'</td>';
+			if(i%3==0) {
+				str += "</tr>";
+			}
+		} str += "</table>"*/
+		
+		for (var i = 1; i <= 3; i++) {
+			str += '<tr>';
+			for (var j = 3*i-2; j <= 3*i; j++) {
+				str += '<td>'+j+'</td>';
+			}
+			str += '<tr>';
+		}
+		
+
+		rDiv.innerHTML = str;
+	</script>
+
+</body>
+</html>
