@@ -78,11 +78,11 @@ etc : 비고 100글자 이하
 			<tr>
 				<th><label for="etc" id="test4">ETC</label></th>
 				
-				<td><textarea name="etc" id="etc" required maxlength="100" ></textarea></td>
+				<td><textarea name="etc" id="etc" required maxlength="10" ></textarea></td>
 			</tr>
 			<tr>
 				<th><button type = "Button" onclick="signUp()">회원가입</button></th>
-				<td> <input type = "submit" value = "보내기" > </td>
+				<td align="center"> <input type = "submit" value = "보내기"> </td>
 			</tr>
 		</table>
 	</form>
@@ -134,8 +134,6 @@ etc : 비고 100글자 이하
 		return true;
 	}
 	
-	
-
 	</script>
 </body>
 </html>
