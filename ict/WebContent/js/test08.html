@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div id="rDiv"></div>
+
+	<form action="/js/test08.jsp">
+		<!-- ID : <input type="text" maxlength="10" min="2" required> <br>
+	PWD : <input type="password" maxlength="5" min="5" required> <br> -->
+		ID : <input type="text" id="id" name="id"> <br> 
+		PWD :<input	type="password" id="pwd" name = "pwd"> <br>
+		<button type="button" onclick="checkValue()">로그인</button>
+
+	</form>
+
+	<script>
+		function checkValue() {
+			var idObj = document.querySelector('#id');	
+			var pwdObj = document.querySelector('#pwd');
+
+			if (idObj.value.trim().length < 4) { //trim 공백제거
+				alert("id는 4글자 이상이어야 합니다.");
+				idObj.value = "";
+				idObj.focus();
+				return false;
+			} 
+			if (pwdObj.value.trim().length < 8) {
+				alert("pwd는 8글자 이상이어야 합니다.");
+				pwdObj.value = "";
+				pwdObj.focus();
+				return false;
+			}
+			return true;
+		}
+		/* function test() {		// 자바스크립트 파라미터는 모두 옵션파라미터이며 넣어도그만 안넣어도 그만이다
+			alert(1);			// 오버로딩 되지않으며 그대로 아래것이 출력된다.
+		}
+		function test(p) {		// undefined 출력
+			alert(p);
+		}
+		test();
+		test = 2;
+		test();					// 함수는 컴파일전에 모두 머리속에 집어넣는다. 그렇기 때문에 어느위치에서 선언하던 실행된다. var은 아님.
+								// 같은함수 중복으로 사용해도 제일마지막에있는 함수가 실행된다. */
+	</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>회원가입</h1>
+<table border="1">
+		<tr>
+			<th><label for="id">ID</label></th>
+			<td>
+				<input type="text" id = "id" name="id" placeholder="create id">
+			</td>
+			<td>
+				<button >ID 중복확인	</button>
+			</td>
+		</tr>
+		
+		<tr>
+			<th><label for="pwd">PASSWORD</label></th>
+			<td >
+				<input  type="password" id = "pwd" name="pwd" placeholder="create pwd">
+			</td>
+			<td rowspan="2">
+			</td>
+		</tr>
+		<tr >
+			<th><label for="checkpwd">PASSWORD 확인</label></th>
+			<td >
+				<input type="password" id = "checkpwd" name="checkpwd" placeholder="check pwd">
+			</td>
+		</tr>
+		
+		
+		<tr>
+			<th><label for="name">NAME</label></th>
+			<td colspan="2">
+				<input type="text"  id = "name" name="name" placeholder="your name">
+			</td>
+		</tr>
+		
+		
+	</table>
+	<button type="button" onclick="location.href='signup.html'">회원가입</button>
+</body>
+</html>
