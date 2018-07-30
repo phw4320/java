@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%
-	// 골뱅이 없는 부분은 자바코드가 다 먹힌다. 메소드 빼고는 다 쓸수 있음
+	// 지시자 , 골뱅이 없는 부분은 자바코드가 다 먹힌다. 메소드 빼고는 다 쓸수 있음
 	//localhost/js/test08.jsp?id=nana&pwd=1234	// 물음표 기준 왼쪽 요청주소 오른쪽 보내려는 값
 	String str = "123";
 	str = request.getParameter("id"); // jsp가 제공해주는것 request name이 id인것을 가져옴
