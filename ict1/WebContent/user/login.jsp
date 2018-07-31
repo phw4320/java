@@ -5,16 +5,17 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
+
+<Link rel="stylesheet" href="/css/common.css"/>
+
 </head>
 
 <body>
 <form action="login_ok.jsp" onsubmit="return signUp()">		<!-- 서브밋은 반드시 폼태그 안에 있어야 함 -->
-	<fieldset>
-	<legend>로그인</legend>
+
 	아이디 : <input type="text" id="id" name="id" required>
 	비밀번호 : <input type="password" id="pwd" name="pwd" required>
 	<button type ="submit">로그인</button>
-	</fieldset>
 
 </form>
 <script>

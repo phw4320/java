@@ -40,14 +40,14 @@ etc : 비고 100글자 이하
  -->
 
 	<form action="join_ok.jsp" onsubmit = "return sighUp()">	 <!-- 결과값에 따라 전송할것이냐 말것이냐 -->
-		<table border="1">
+		<table border="1"> 
 			<tr>
-				<th colspan="2" align="center">회원가입</th>
+				<th colspan="2" align="center">회원가입 화면</th>
 			</tr>
 
 			<tr>
 				<th><label for="id" class="test1">ID</label></th>
-				<td><input type="text" id="id" name="id" required></td>
+				<td><input type="text" id="id" name="id" required ></td>
 			</tr>
 			
 			<tr>
