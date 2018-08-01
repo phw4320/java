@@ -7,11 +7,14 @@
 <title>Insert title here</title>
 <link rel="stylesheet" href="/css/bt-337/dist/css/bootstrap.css">
 <link rel="stylesheet" href="/css/bt-337/dist/css/bootstrap-theme.css">
+<style>
+
+</style>
 </head>
 <body>
 <div class="container">
 
-	<table class = "table">
+	<table class = "table table-hover">
 	
 		<tr>
 			

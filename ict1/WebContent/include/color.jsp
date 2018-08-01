@@ -7,10 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<input type="color" id="cl" onchange="start()">
-	<button onclick="check()">나야</button>
-	<button onclick="start()">222</button>
-	<div id="rDiv" style="width:1000px; height:1000px">zzz</div>
+	<div id="rDiv" style="width:2000px; height:1000px"></div>
 
 	<script type="text/javascript">
 		var rdiv = document.querySelector('#rDiv');
@@ -28,8 +25,8 @@
 				var b = Math.floor(Math.random() * 255);
 				rdiv.style.backgroundColor = 'rgb(' + r + ',' + g + ',' + b + ')';
 		        count++;
-		        if (count == 100) stop();
-		    },100);
+		        if (count == 1000) stop();
+		    },50);
 		}
 		 
 		function stop(){
