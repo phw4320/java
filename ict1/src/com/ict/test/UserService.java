@@ -5,29 +5,30 @@ import java.util.HashMap;
 import java.util.List;
 
 public class UserService {
-	private static UserService us = new UserService();
+	private static UserService us;
 	private List<HashMap<String, String>> userList;
 
 	public static UserService getUserService() {
-	
+		if (us == null) {
 			us = new UserService();
-
-
+		}
 		return us;
 	}
 
 	public List<HashMap<String, String>> getUserList() {
-		for (int i = 1; i <= 10; i++) {
-			HashMap<String, String> hm = new HashMap<String, String>();
-			int rNum = (int) (Math.random() * 100);
-			hm.put("name", "홍길동" + i);
-			hm.put("age", rNum + "");
-			hm.put("id", "hello" + i);
-			hm.put("address", "천안시 동남구 " + rNum + "번지");
+		if (userList == null) {
+			userList = new ArrayList<HashMap<String, String>>();
+			for (int i = 1; i <= 10; i++) {
+				HashMap<String, String> hm = new HashMap<String, String>();
+				int rNum = (int) (Math.random() * 100);
+				hm.put("name", "홍길동" + i);
+				hm.put("age", rNum + "");
+				hm.put("id", "hello" + i);
+				hm.put("address", "천안시 동남구 " + rNum + "번지");
 
-			userList.add(hm);
+				userList.add(hm);
+			}
 		}
-
 		return userList;
 	}
 
@@ -42,6 +43,7 @@ public class UserService {
 				userList2.add(hm);
 			}
 		}
+			
 		return userList2;
 	}
 

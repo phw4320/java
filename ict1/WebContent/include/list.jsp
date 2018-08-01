@@ -10,7 +10,7 @@
 
 	UserService us = UserService.getUserService();
 	String searchStr = request.getParameter("searchStr");
-	List<HashMap<String,String>> usList = us.getUserList(searchStr);
+	List<HashMap<String,String>> usList = us.getUserList();
 	%>
 <!DOCTYPE html>
 <html>
@@ -39,9 +39,11 @@
 		<table class = "table table-hover">
 			<thead>
 				<tr>
-					<th>부서명</th>
-					<th>부서코드</th>
-					<th>부서인원</th>
+					<th>이름</th>
+					<th>아이디</th>
+					<th>나이</th>
+					<th>주소</th>
+			
 				</tr>
 			</thead>
 
@@ -55,12 +57,11 @@
 					<td><a href="#"><%=usList.get(i).get("name")%></a></td>
 					<td><%=usList.get(i).get("id")%></td>
 					<td><%=usList.get(i).get("age")%></td>
+					<td><%=usList.get(i).get("address")%></td>
 				</tr>
 				<%
 					}
-				
 				%>
-				
 			</tbody>
 		</table>
 	</div>
