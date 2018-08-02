@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form onsubmit="return test(this)">
+	ID : <input type="text" id="id" placeholder="5글자이상 입력" required><br>
+	PASSWORD : <input type="password" id="pwd" placeholder="5글자이상 입력" required><br>
+	<button onclick="test()">로그인</button>
+</form>
+<script>
+	function test() {
+		var idObj = document.querySelector('#id');
+		var pwdObj = document.querySelector('#pwd');
+		
+		if(idObj.value.trim().length<5) {
+			idObj.value = '';
+			idObj.focus();
+			alert('아이디는 5글자 이상이어야 합니다.');
+			return false;
+		}
+		
+		if(pwdObj.value.trim().length<5) {
+			pwdObj.value = '';
+			pwdObj.focus();
+			alert('비밀번호는 5글자 이상이어야 합니다.');
+			return false;
+		}
+		alert('회원가입 완료');
+		return true;
+	}
+</script>
+</body>
+</html>

@@ -17,13 +17,15 @@
 <link rel="stylesheet" href="/css/bt-337/dist/css/bootstrap.css">
 <link rel="stylesheet" href="/css/bt-337/dist/css/bootstrap-theme.css">
 <style>
-	thead>tr>th {
+	thead th,td {
 	text-align : center;
 	}
 	
-	tbody td {
-	text-align : center;
+	.table td:hover {
+		font-weight:bold;
+		color:red;
 	}
+	
 </style>
 </head>
 <body>
@@ -33,7 +35,7 @@
 </form>
 	<div class="container">
 	
-		<table class="table table-border table-hover">
+		<table class="table">
 			<thead>
 				<tr>
 					<th>자동차 종류</th>
