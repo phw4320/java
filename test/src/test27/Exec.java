@@ -12,10 +12,16 @@ public class Exec {
 		ArrayList<HashMap<String, String>> userList = new ArrayList<HashMap<String, String>>();
 		MemberDAO mdao = new MemberDAOImpl();
 		HashMap<String, String> user = new HashMap<String, String>();
+
+		//user.put("memName", "장발장");
+
+		//ArrayList<HashMap<String, String>> user1 = mdao.selectMember(null);
 		user.put("memName", "임꺽정");
 		ArrayList<HashMap<String, String>> user1 = mdao.selectMember(user);
 		for (int i = 0; i < user1.size(); i++) {
 			System.out.println(user1.get(i));
+	
+		
 		}
 		System.out.println("등록할 명수를 입력하세요");
 		int cnt = Integer.parseInt(scan.nextLine());

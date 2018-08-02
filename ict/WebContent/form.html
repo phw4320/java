@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<form>
+		<!-- <input type="text" id="num1"><br>
+		<button type="button" onclick="alert(1)">클릭</button>
+ -->
+		숫자1 : <input type="text" id="num1" value="456"> <br> <select
+			id="op">
+			<option value="+">더하기</option>
+			<option value="-">빼기</option>
+			<option value="*">곱하기</option>
+			<option value="/">나누기</option>
+		</select><br> 숫자 2 : <input type="text" id="num2" value="123"> <br>
+		<button type="button" onclick="operation();">계산하기</button> <br>
+		결과 : <input type="text" id="result">
+
+
+		<script>
+			/* 
+			var num = 1;			// 1을 넣는순간 데이터타입이 정수형으로바뀜 = 동적데이터바인딩
+			num = "1";				// on이 붙으면 이벤트
+			var num2 = 1;
+			alert(num+num2);
+			 
+			var a = 1;				// var 은 미리선언해주어야 그밑으로  사용할 수 있다.
+			alaer(a);
+			
+			test();					// 함수는 자바가 미리 다 파악을 하고선 컴파일하기때문에 순서에 구속받지않는다.
+			function test() {
+				alert(2);
+			}
+			
+			var a = function() {
+				alert(3);'
+			}
+			
+			setTimeout(function(){ 	// 타이머
+				alert(1);
+			},5000);*/
+			/* function operation() {
+				var num1 = document.getElementById("num1").value;
+				var num2 = document.getElementById("num2").value;
+				if (op.options[1].selected == true) 
+				{
+					alert(num1 + num2)
+				}
+			}
+
+			function test() {
+				alert(this == window);
+			} */
+			/* test();		// = true
+			new test(); // = false
+			new test(this); // = true */
+
+			var numObj1 = document.getElementById("num1").value;
+			numObj1 = Number(numObj1);
+			var numObj2 = document.getElementById("num2").value;
+			numObj2 = Number(numObj2);
+			var selObj = document.getElementById("op");
+			alert(document.getElementById("result").value);
+			/* alert(numObj1.type);
+			alert(numObj1.id);
+			alert(numObj1.value);
+			 */
+
+			function operation() {
+				if (selObj.value == "+") {
+					document.getElementById("result").value = numObj1 + numObj2;
+					alert(document.getElementById("result").value);
+				} else if (selObj.value == "-") {
+					document.getElementById("result").value = numObj1 - numObj2;
+					alert(document.getElementById("result").value);
+				} else if (selObj.value == "*") {
+					document.getElementById("result").value = numObj1 * numObj2;
+					alert(document.getElementById("result").value);
+				} else if (selObj.value == "/") {
+					document.getElementById("result").value = numObj1 / numObj2;
+					alert(document.getElementById("result").value);
+				}
+			}
+		</script>
+	</form>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	이름 :
+	<input type="text" id="name" name="name">
+	<br> 취미 :
+	<input type="text" id="hobby" name="hobby">
+	<br>
+	<button onclick="result()">입력</button>
+	결과 :
+	<textarea id="result"></textarea>
+	
+	<div id = "rDiv">
+		<div class = "f">난 첫번째 div</div>
+		<div class = "l">난 두번째 div</div>
+	</div>
+	<script>
+		/* var s = 'asdad';		//자바스크립트는 홑따옴표를씀 html은 쌍따옴표
+		var name = prompt('이름이 뭔가요?','');
+		var str = '취미가 뭔가요? 여러개면 ' + ',를 구분자로 넣어주세요.';
+		var hobbies = prompt(str, '');
+		var hobs = hobbies.split(',');
+		console.log(hobs);
+		document.write(name+'님의 취미는<br>');
+		for (var i = 0; i < hobs.length; i++) {
+			document.write((i + 1) +'.' + hobs[i]+', ');
+		} */
+
+		/* function result() {
+			var nameObj = document.getElementById("name");
+			var hobbyObj = document.getElementById("hobby");
+			var hobs = hobbyObj.value.split(",");
+			var str = nameObj.value;
+			str += '님 안녕하세요.\r\n 당신의 취미는 ';
+			str += hobs;
+			var resultObj = document.getElementById("result");
+			resultObj.value = str;
+		} */
+		
+		/* function result() {											// #은 id
+			var nameObj = document.querySelector("#name");			// 여러개라하더라도 제일첫번째것 가져옴	id가 name인것 가져옴
+
+			var inputObjs = document.querySelectorAll("input");		// 하나라도 배열로 출력		input태그 다가져옴
+			alert(inputObjs[1].value);								// 한번에가져와서 이벤트 처리할때 유용
+			alert(nameObj.value);
+			inputObjs.
+		} */
+		
+		function result() {
+			var fDiv = document.querySelector("div .f"); // 내안에있는 누구나 다 .은 클래스를 가르킴 즉, div안에있는 클래스 f 를 불러옴 (div안에 감싸져있는 클래스)
+				
+		}
+	</script>
+</body>
+</html>

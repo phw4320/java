@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<!-- <a href = "http://naver.com">네이버</a> -->
+<a href = "#" onclick = "goPage(this)" target="_self" >네이버</a>
+<a href = "#" onclick = "goPage(this)" target="_self" >다음</a>
+<a href = "#test">책갈피로 이동</a>
+<p><br>
+<p><br>
+<p><br>
+<p><br>
+<p><br>
+<p><br>
+<p><br>
+<p><br>
+<p><br>
+<p><br>
+<p><br>
+<p><br>
+<p><br>
+<p><br>
+<p><br>
+<p><br>
+<p><br>
+<p><br>
+<p><br>
+<p><br>
+<p><br>
+<p><br>
+<p><br>
+<p><br>
+<p><br>
+<p><br>
+<p><br>
+<p><br>
+<p><br>
+<p><br>
+<p><br>
+<p><br>
+<p><br>
+<a id="test">책갈피</a>
+
+<script type="text/javascript">
+
+	var urlMap = {
+			'네이버' : 'http://naver.com',
+			'다음' : 'http://daum.net'
+	};		// 이런형태를 제이슨이라함. 왼쪽이 키 오른쪽 벨류
+	
+	alert(urlMap['네이버']);
+	alert(urlMap['다음']);
+	
+	 function goPage(aObj) {
+		alert(aObj.href);
+		alert(aObj.target);
+		alert(aObj.innerHTML);
+		//alert(aObj[1].innerHTML);
+	} 
+	
+	function goPage(aObj) {
+		aObj.href = urlMap[aObj.innerHTML];
+	}
+</script>
+
+</body>
+</html>
