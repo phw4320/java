@@ -8,3 +8,4 @@ public class Test1 {
 		t.num = 1020;
 	}
 }
+ 

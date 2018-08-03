@@ -5,7 +5,7 @@ public class Excutor /*extends Person*/{
 	public static void main(String[] args) {
 		Person p = new Person();
 		Excutor e = new Excutor();
-		p.setName("박경훈1");
+		p.setName("박경훈1"); 
 		p.setAge(25);
 		p.setAddress("서울");
 		System.out.println(p.getName());

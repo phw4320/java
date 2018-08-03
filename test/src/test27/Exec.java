@@ -54,7 +54,7 @@ public class Exec {
 		}
 		
 		System.out.println("삭제할 이름을 입력하세요");
-		String delName = scan.nextLine();
+		String delName = scan.nextLine(); 
 		user.put("memName", delName);
 
 		if (mdao.deleteMember(user) == 1) {
