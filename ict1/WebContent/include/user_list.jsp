@@ -1,3 +1,4 @@
+<%@page import="com.ict.test.UserService2"%>
 <%@page import="java.util.HashMap"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="java.sql.ResultSet"%>
@@ -10,16 +11,16 @@
 <%@page import="com.ict.test.CarService"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-	<%
-	CarService cs = CarService.getCarService();
+<%
+	UserService2 us = UserService2.getUserService();
 	String searchStr = request.getParameter("searchStr");
-	List<Map<String, String>> cList = cs.getCarList(searchStr);
-	%>
+	String[] check = request.getParameterValues("check");
+	List<Map<String, String>> uList = us.getUserList(searchStr,check);
+%>
 <%!private static String url = "jdbc:oracle:thin:@localhost:1521:xe";
 	private static String id = "ictu";
 	private static String pwd = "12345678";
-	private static String driver = "oracle.jdbc.driver.OracleDriver";
-%>
+	private static String driver = "oracle.jdbc.driver.OracleDriver";%>
 
 <!DOCTYPE html>
 <html>
@@ -40,28 +41,33 @@ thead th, td {
 </style>
 </head>
 <body>
-	<form action="" method="get">
-		차종류 : <input type="text" name="searchStr">
-		<button>검색</button>
-	</form>
-	<div class="container">
 
+	<div class="container">
+		<form action="" method="get">
+			<input type="checkbox" name="name" value="name" id="name">이름
+			<input type="checkbox" name="age" value="age" id="age">나이 <input
+				type="checkbox" name="id" value="id" id="id">아이디 :<input
+				
+				type="text" name="searchStr"
+				value="<%=searchStr != null ? searchStr : ""%>">
+			<button>검색</button>
+		</form>
 		<table class="table">
 			<thead>
 				<tr>
-					<th>자동차 종류</th>
-					<th>가격</th>
-					<th>회사명</th>
+					<th>이름</th>
+					<th>아이디</th>
+					<th>비밀번호</th>
 				</tr>
 			</thead>
 			<tbody>
 				<%
-					for (Map<String, String> car : cList) {
+					for (Map<String, String> user : uList) {
 				%>
 				<tr>
-					<td><a href="#"><%=car.get("name")%></a></td>
-					<td><%=car.get("price")%></td>
-					<td><%=car.get("vender")%></td>
+					<td><a href="#"><%=user.get("name")%></a></td>
+					<td><%=user.get("id")%></td>
+					<td><%=user.get("pwd")%></td>
 				</tr>
 				<%
 					}
