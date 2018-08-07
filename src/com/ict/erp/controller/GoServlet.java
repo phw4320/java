@@ -15,7 +15,7 @@ public class GoServlet extends HttpServlet {
 		String uri = request.getRequestURI();
 		System.out.println(uri);
 		String rPath = request.getContextPath();
-		System.out.println(rPath);
+		System.out.println(rPath);  
 		response.setContentType("text/html;charset=UTF-8");
 		response.setCharacterEncoding("UTF-8");
 		PrintWriter out = response.getWriter();
