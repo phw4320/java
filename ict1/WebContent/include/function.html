@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<!-- function test(f) {
+		f()
+	}
+	var func1;
+	func1 = function() {
+		alert('b');
+	}
+	func1(func1); -->
+<script>
+	<!-- var Func = function() {
+		var a = 3;
+		this.getA = function() {
+			return a;
+		}
+	}
+	
+	var f = new Func(); <!-- 멤버 a와 메소드 getA를 사용할 수 있는 객체 -->
+	
+	<!-- alert(f.getA);
+	 
+	function a() {
+		alert("a");
+	}
+	function a(a) {
+		alert("b");
+	}
+	a(); -->
+	<!-- 파라미터 넣어도그만 안넣어도그만 오버로딩 없이 마지막에 정의한것으로 들어감 -->
+	
+	var f = {a:'1', b:'2', break:function(){
+		
+	}
+	alert(f['a']);
+	alert(f.a);
+	alert(f['b']);
+	alert(f.b);
+
+	var f = function() {
+		this.a = '1';
+		this.b = '2';
+		this.breake = function() {
+			
+		}
+	}
+	alert((new f()).a);
+	
+	
+</script>
+</body>
+</html>

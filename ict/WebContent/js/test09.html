@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<table border ="1">
+		<tr>
+		<th colspan="2"> 회원가입 </th>
+		</tr>
+		
+		<tr>
+		<th> 아이디 </th>
+		<td> <input type="text" id="id" placeholder="more than 5word">
+		</tr>
+		
+		<tr>
+		<th> 비밀번호 </th>
+		<td> <input type="password" id="pwd" placeholder="more than 6word">
+		</tr>
+		
+		<tr>
+		<th> 비밀번호 확인 </th>
+		<td> <input type="password" id="chPwd" placeholder="same as password">
+		</tr>
+		
+		<tr>
+		<th> 이름 </th>
+		<td> <input type="text" id="name" placeholder="can't accept null">
+		</tr>
+		
+		<tr>
+		<th> 나이 </th>
+		<td> <input type="text" id="age" placeholder="range 0~130">
+		</tr>
+		<tr> 
+		<th colspan="2"> <button type="button" onclick="signUp()"> 회원가입 </button> </th>
+		</tr>
+	</table>
+	
+	<script>
+	function signUp() {
+		var idObj = document.querySelector('#id');	
+		var pwdObj = document.querySelector('#pwd');
+		var chPwdObj = document.querySelector('#chPwd');
+		var nameObj = document.querySelector('#name');
+		var ageObj = document.querySelector('#age');
+
+		var a = parseInt(ageObj.value);
+		
+		if (idObj.value.trim().length < 5) { 
+			alert("아이디는 5글자 이상이어야 합니다.");
+			idObj.value = "";
+			idObj.focus();
+			return false;
+		} 
+		if (pwdObj.value.trim().length < 6) {
+			alert("비밀번호는 6글자 이상이어야 합니다.");
+			pwdObj.value = "";
+			pwdObj.focus();
+			return false;
+		}
+		
+		if (pwdObj.value != chPwdObj.value) {
+			alert("비밀번호가 서로 다릅니다. 다시 입력해주세요.");
+			pwdObj.value = "";
+			chPwdObj.value = "";
+			pwdObj.focus();
+			return false;
+		}
+		
+		if (nameObj.value.trim().length==0) {
+			alert("이름은 빈 문자를 사용할 수 없습니다");
+			nameObj.value = "";
+			nameObj.focus();
+			return false;
+		}
+		if (a >= 130 || a < 0) {
+			alert("0~130의 나이중 올바른 나이를 다시 입력하세요");
+			ageObj.value = "";
+			ageObj.focus();
+			return false;
+		}
+		alert("회원가입 완료");
+		return true;
+	}
+	</script>
+</body>
+</html>

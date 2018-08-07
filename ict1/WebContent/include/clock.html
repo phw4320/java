@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<div id="rDiv"></div>
+초 입력:<input type="text" id="al">
+<button type="button" onclick="setAl()">알람설정</button>
+
+
+	<!--setTimeout(showDate,1000);
+	setInterval(showDate,1000);-->
+<script> 
+	function showDate() {
+	var toDate = new Date();
+	var yyyy = toDate.getFullYear();
+	var mm = toDate.getMonth()+1;
+	var dd = toDate.getDate();
+	var hh = toDate.getHours();
+	var mi = toDate.getMinutes();
+	var ss = toDate.getSeconds();
+	var clockStr = yyyy+"-"+ mm +"-"+ dd + " ";
+	clockStr += hh + ":" + mi + ":" + ss;
+	document.querySelector("#rDiv").innerHTML = clockStr;
+	
+	}
+
+	setInterval(showDate,1000);
+	
+	
+	function setAl() {
+		var alObj = document.querySelector('#al');
+		var al = parseInt(alObj.value);
+		setTimeout(function(){ alert("타임체크")}, al*1000);
+	}
+	
+	
+</script>
+</body>
+</html>
