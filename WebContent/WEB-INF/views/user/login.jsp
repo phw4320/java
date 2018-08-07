@@ -10,7 +10,7 @@
 </style>
 <body>
 <div class="login-form">
-    <form action="/examples/actions/confirmation.php" method="post">
+    <form action="/erp/WEB-INF/views/user/login.jsp" method="post">
         <h2 class="text-center">Sign in</h2>   
         <div class="form-group">
         	<div class="input-group">
@@ -25,7 +25,7 @@
             </div>
         </div>        
         <div class="form-group">
-            <button type="button" id="login" class="btn btn-primary login-btn btn-block">Sign in</button>
+            <button type="submit" id="login" class="btn btn-primary login-btn btn-block">Sign in</button>
         </div>
         <div class="clearfix">
             <label class="pull-left checkbox-inline"><input type="checkbox"> Remember me</label>

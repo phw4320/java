@@ -21,4 +21,7 @@ public class MenuUtils {
 		}
 		return menuList;
 	}
+	public static String getCommand(String uri) {
+		return uri.substring(uri.lastIndexOf("/")+1);
+	}
 }
